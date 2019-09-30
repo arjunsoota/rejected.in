@@ -29,9 +29,16 @@
                                     <span class="navbar-brand mb-0 h1">
                                         <a class="navbar-brand" href="#" >We've all faced rejection.</a>
                                     </span>
+                                    {% if user.is_authenticated %}
+                                    <span class="top-menu" style="color: white">Hello {{ user.username }}</span>
+                                    {% endif %}
                                     <span class="navbar-text">
-                                        <button class="btn btn-outline-light" type="submit"> Share your experience</button>
+                                        <a href="{% url 'post_new' %}" >
+                                        <button class="btn btn-outline-light" type="submit"> 
+                                            Share your experience
+                                        </button></a>                                            
                                     </span>
+                                    
                                   </nav>
                     </div>
                     
