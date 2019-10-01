@@ -13,6 +13,8 @@ def index(request):
         }
     return render(request, 'main\index.html',context)
 
+def submit(request):
+    return render(request, 'main\submit.html',{})
 
 @login_required
 def post_new(request):
@@ -23,7 +25,7 @@ def post_new(request):
             post.author = request.user
             # post.published_date = timezone.now()
             post.save()
-            return redirect('index')
+            return redirect('submit')
     else:
         form = PostForm()
     return render(request, 'main\post_edit.html', {'form': form})

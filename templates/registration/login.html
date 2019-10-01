@@ -1,8 +1,19 @@
 {% extends 'main\base.html' %}
 
+
+
 {% block content %}
-  <h2>Login</h2>
-  <br>
-  <!-- <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br> -->
-  <a href="{% url 'social:begin' 'twitter' %}">Login with Twitter</a>
+
+  
+      <h2 class="display-4 text-center ">Login</h2>
+      <br>
+      <!-- <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br> -->
+      
+      <a class="btn btn-block btn-social btn-twitter" href="{% url 'social:begin' 'twitter' %}">
+          <i class="fa fa-twitter"></i> Sign in with Twitter
+        </a>
+    
+    
+  
+  
 {% endblock %}

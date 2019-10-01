@@ -1,0 +1,15 @@
+{% extends 'main\base.html' %}
+
+{% block content  %}
+
+
+        <br><br><br><br><br>
+        <div class="container">
+                <h1 class="display-4 text-center "><span class="badge badge-success">Success</span></h1>
+                <p class="lead text-center"> <small class="text-muted">The content will be moderated by our team and will be 
+                      soon available publically !</small></p>          
+        </div>
+        <a href="{% url 'logout' %}" ><h6 class="display-6 text-center "> Go to Home Page </h6>
+        </a>
+    
+{% endblock %}
