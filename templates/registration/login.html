@@ -4,16 +4,16 @@
 
 {% block content %}
 
-  
+      <br><br>
       <h2 class="display-4 text-center ">Login</h2>
-      <br>
-      <!-- <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br> -->
+   
+      <div style="text-align:center">
+        <br><br>
+        <a href="{% url 'social:begin' 'twitter' %}" ><button class="text-center btn btn-primary btn-social btn-twitter" type="submit"> 
+            <i class="fa fa-twitter " style="align-content: center"></i> &nbsp; &nbsp; &nbsp; &nbsp; Sign in with Twitter 
+        </button></a>
       
-      <a class="btn btn-block btn-social btn-twitter" href="{% url 'social:begin' 'twitter' %}">
-          <i class="fa fa-twitter"></i> Sign in with Twitter
-        </a>
-    
-    
+      </div>
   
   
 {% endblock %}

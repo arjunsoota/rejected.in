@@ -6,7 +6,7 @@ from django.utils import timezone
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     name = models.CharField(max_length = 256)
-    profile_image = models.ImageField()
+    profile_image = models.URLField(max_length=1000)
     position = models.CharField(max_length =256,null=True) 
     importance= models.BooleanField(default=False)
     text = models.TextField()
@@ -18,5 +18,5 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.author.username
+        return self.name
 

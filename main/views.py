@@ -18,7 +18,7 @@ def index(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     
     context ={
-        'posts':posts,
+        'posts':posts
         }
     return render(request, 'main\index.html',context)
 
@@ -37,17 +37,12 @@ def post_new(request):
             post = form.save(commit=False)
             post.author = request.user
             post.name = user_main.name
-            
-            image_url = user_main.profile_image_url_https
-            img_temp = NamedTemporaryFile()
-            img_temp.write(urllib.request.urlopen(image_url).read())
-            img_temp.flush()
-
-            post.profile_image.save("image_%s" %post.pk, File(img_temp))
+            post.profile_image = user_main.profile_image_url_https
             # post.published_date = timezone.now()
             post.save()
             return redirect('submit')
     else:
-        form = PostForm()
-    return render(request, 'main\post_edit.html', {'form': form})
+        data = {'position' : user_main.description }
+        form = PostForm(initial=data)  
+    return render(request, 'main\post_edit.html', {'form': form , 'user_obj':user_main})
 
