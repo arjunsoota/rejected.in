@@ -21,9 +21,16 @@
                    width: 100%;
                    text-align: center;
                 }
+                .media {
+                  display: block;
+                  padding: 1em;
+                }
+                .media > img {
+                  float: left;
+                }
         </style>
     </head>
-  
+
     <body>
 
                     <div class="page-header">
@@ -40,20 +47,20 @@
                                     {% endif %}
                                     <span class="navbar-text">
                                         <a href="{% url 'post_new' %}" >
-                                        <button class="btn btn-outline-light" type="submit"> 
+                                        <button class="btn btn-outline-light" type="submit">
                                             Share your experience
-                                        </button></a>                                            
+                                        </button></a>
                                     </span>
-                                    
+
                                   </nav>
                     </div>
-                    
+
                     <div class="content container">
-                       
-                           
+
+
                             {% block content %}
                             {% endblock %}
-                          
+
                     </div>
                     <br><br>
                     <div class="fixed-bottom">       <footer>
@@ -62,5 +69,5 @@
     </div>
         <br>
     </body>
-   
+
 </html>
