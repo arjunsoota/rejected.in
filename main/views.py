@@ -10,8 +10,9 @@ from django.core.files.temp import NamedTemporaryFile
 import urllib
 
 
-auth = tweepy.OAuthHandler('' , '')
-auth.set_access_token('', '')
+
+auth = tweepy.OAuthHandler('Pl6bj5U8uP0QcZvR2R7iQ5XEd' , 'RZTXsYNk3lggQnVZGFUg3ZRJLkh8N39AkyIfgmS4Vr8B2vfTp4')
+auth.set_access_token('1630734300-TKDnPMLH4SRriUDcbouSDPtQAdgwbXW2h7DiV66', 'x0l48tZqGxRddgN6jyvdguwlk4LTPAka27tsiSqURcLnY')
 api = tweepy.API(auth)
 # Create your views here.
 def index(request):

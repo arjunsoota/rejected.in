@@ -15,17 +15,36 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <style>
-                footer {
-                   left: 0;
-                   bottom: 0;
-                   width: 100%;
-                   text-align: center;
+            
+            html, body {
+                height: 100%;
+                margin: 0;
                 }
+                .wrapper {
+                min-height: 100%;
+
+                /* Equal to height of footer */
+                /* But also accounting for potential margin-bottom of last child */
+                margin-bottom: -50px;
+                }
+                .footer,
+                .push {
+                height: 50px;
+                
+                }
+                 .media {
+                  display: block;
+                  
+                }
+                .media > img {
+                  float: left;
+                }
+                
         </style>
     </head>
   
     <body>
-
+            <div class="wrapper">
                     <div class="page-header">
                             <nav class="navbar navbar-dark bg-primary">
                                     <span class="navbar-brand mb-0 h1">
@@ -56,11 +75,11 @@
                           
                     </div>
                     <br><br>
-                    <div class="fixed-bottom">       <footer>
-           Made with ❤ in INDIA !
-        </footer>
-    </div>
-        <br>
+                    <div class="push"></div>
+                        </div>
+                        <footer class="footer" style="text-align: center;">Made with ❤ in INDIA !</footer>
+                    
+        
     </body>
    
 </html>
